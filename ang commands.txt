@@ -16,8 +16,12 @@ git push -u origin main
 
 Command: 
 npm install -g angular-cli-ghpages
-ng build --prod --base-href "https://alexx73.github.io/yourreposi...​"
+ng build --prod --base-href "https://alexx73.github.io/angular1/​"
 ngh --no-silent
 git config --global credential.helper wincred //if you get issue with auth
+
+npx angular-cli-ghpages — dir=dist/Project-name
+
+npx ngh --dir=dist/angularapp
 
 https://alexx73.github.io/angular1/
