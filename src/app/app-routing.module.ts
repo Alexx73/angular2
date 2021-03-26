@@ -3,10 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SkeletonComponent } from './layout/skeleton.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: SkeletonComponent
-  }
+  
 ];
 
 @NgModule({
