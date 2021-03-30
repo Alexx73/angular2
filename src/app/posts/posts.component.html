@@ -1,0 +1,46 @@
+
+  <app-navbar></app-navbar>
+
+<style>
+  td {
+  white-space: normal !important; 
+  word-wrap: break-word;  
+}
+table {
+  table-layout: fixed;
+}
+</style>
+
+<!-- <div class="container"> -->
+
+  <table class="table table-striped w-75">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Restaurant</th>
+        <th scope="col">Hamburguer  </th>
+        <th scope="col">Web Address</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let post of posts; let i = index">  
+
+        <!-- i Controla el numero de iteraciones a Mostrar -->
+        <ng-container *ngIf="i < 10">
+            <th scope="row">{{post.id+1}}</th>
+            <td>{{post.restaurant}}</td>
+            <td>{{post.name}}</td>
+            <td>{{post.web}}</td>
+        </ng-container>
+      </tr>
+    </tbody>
+
+  </table>
+
+  
+
+<!-- </div> -->
+
+<app-footer></app-footer>
+

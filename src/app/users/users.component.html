@@ -1,5 +1,8 @@
 
 
+  <app-navbar></app-navbar>
+
+<!-- 
 <table class="table">
     <thead>
       <tr>
@@ -48,23 +51,66 @@
       </tr>
       <tr>
         <th scope="row">7</th>
+        <td>Steve</td>
+        <td>James</td>
+        <td>@STJ</td>
+      </tr>
+
+      <tr>
+        <th scope="row">8</th>
         <td>Mark</td>
         <td>Otto</td>
         <td>@mdo</td>
       </tr>
+
+      <tr>
+        <th scope="row">9</th>
+        <td>Tim</td>
+        <td>Burton</td>
+        <td>@Tbu</td>
+      </tr>
       
     </tbody>
-  </table>
+  </table> -->
+<!-- 
+<ul>
+  <li *ngFor="let item of employee" >{{item.id}} {{item.name}} {{item.lastName}}
+    {{ courses.id}} {{ courses.name}} 
+    {{ courses.phone[0] }} {{ courses.phone[1] }}
+    <p *ngFor="let item of employee" >{{item.id}} {{item.name}} </p>
 
+  </li>
+</ul> -->
 
 <div class="container">
 
+  <table class="table table-responsive">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">User</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of employee; let i = index">  
 
-<!-- <button routerLink="/">Home</button> -->
-    
-
+        <!-- i Controla el numero de iteraciones a Mostrar -->
+        <ng-container *ngIf="i < 10">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.username}}</td>
+        </ng-container>
+      </tr>
+    </tbody>
+  </table>  
 </div>
 
+
+
+  <app-footer></app-footer>
 
 
 
