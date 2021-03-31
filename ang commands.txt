@@ -16,7 +16,7 @@ git push -u origin main
 
 ---------
 
-Command: 
+Commands : 
 npm install -g angular-cli-ghpages
 
 ng build --prod --base-href "https://alexx73.github.io/angular2/​"
