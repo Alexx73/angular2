@@ -1,14 +1,24 @@
+import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-content',
+  selector: 'content',
   templateUrl: './content.component.html',
 })
 export class ContentComponent implements OnInit {
 
-  constructor() { }
+  @Input() id = '';
+  @Input() name = '';
+  @Input() avatar ='';
+  @Input() email = '';
 
-  ngOnInit(): void {
-  }
+  constructor(  ) { 
+
+    
+
+}
+
+ngOnInit(): void {
+}
 
 }
