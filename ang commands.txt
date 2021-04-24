@@ -17,11 +17,17 @@ git push -u origin main
 ---------
 
 Commands : 
+
+instalation:
 npm install -g angular-cli-ghpages
 
+Para crear build (nueva version)
 ng build --prod --base-href "https://alexx73.github.io/angular2/​"
 
+to deploy:
 ngh --no-silent
+
+
 
 git config --global credential.helper wincred //if you get issue with auth
 
