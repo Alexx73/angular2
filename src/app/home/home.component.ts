@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-url1 = 'https://reqres.in/api/users?page=2';
+url1 = 'https://reqres.in/api/users?page=1';
 respuesta: any = [];
 id = '';
 avatar = '';
