@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PostsComponent implements OnInit {
 
-  posts : [];
+  posts : any [];
   url = 'https://mi-comida-api.herokuapp.com/burgers';
   url2 = 'https://restaurants-api-01.herokuapp.com/restaurants';
 
@@ -16,9 +16,12 @@ export class PostsComponent implements OnInit {
 
     
     this.http.get<any>(this.url2).subscribe(data =>
-      {console.log(data);
+      {
+        console.log(data);
       this.posts = data;
-      console.log(this.posts);
+      console.log('dir:', this.posts[0].address);
+      console.log('pic:', this.posts[0].pic);
+
 
         
       });

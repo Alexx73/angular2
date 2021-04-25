@@ -13,13 +13,15 @@ table {
 
 <!-- <div class="container"> -->
 
-  <table class="table table-striped w-75">
+  <table class=" container table table-striped ">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Restaurant</th>
-        <th scope="col">Direccion  </th>
-        <th scope="col">Página Web</th>
+        <th class="col-sm-1">#</th>
+        <th class="col-sm-2">Restaurant</th>
+        <th class="col-sm-2">Direccion  </th>
+        <th class="col-sm-2">Página Web</th>
+        <th class="col-sm-3">Imagen</th>
+
       </tr>
     </thead>
 
@@ -28,10 +30,11 @@ table {
 
         <!-- i Controla el numero de iteraciones a Mostrar -->
         <ng-container *ngIf="i < 10">
-            <th scope="row">{{post.id+1}}</th>
-            <td>{{post.restaurant}}</td>
-            <td>{{post.address}}</td>
-            <td>{{post.web}}</td>
+            <th class="col-sm-1" > <h5>{{post.id+1}} </h5> </th>
+            <td class="col-sm-2" > {{post.restaurant}}</td>
+            <td class="col-sm-2" >{{post.address}}</td>
+            <td class="col-sm-2" >{{post.web}}</td>
+            <td class="col-sm-3" > <img [src]="post.pic" style="height:100px;width:150px;"  alt=""> </td>
         </ng-container>
       </tr>
     </tbody>
