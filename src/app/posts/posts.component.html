@@ -11,6 +11,12 @@
 } */
 </style>
 
+<style>
+  .my-pagination /deep/ .ngx-pagination .current {
+    background: red;
+  }
+</style>
+
 <div class="container">
 
   <table class=" table table-striped ">
@@ -26,23 +32,25 @@
     </thead>
 
     <tbody>
-      <tr *ngFor="let post of posts; let i = index">  
+      <tr *ngFor="let post of posts | paginate: { itemsPerPage: 3, currentPage: pageActual}; let i = index">  
 
-        <!-- i Controla el numero de iteraciones a Mostrar -->
-        <ng-container *ngIf="i < 10">
+        
             <th class="col-sm-1" > <h5>{{post.id+1}} </h5> </th>
             <td class="col-sm-2" > {{post.restaurant}}</td>
             <td class="col-sm-2" >{{post.address}}</td>
             <td class="col-sm-2" >{{post.web}}</td>
             <td class="col-sm-3" > <img [src]="post.pic" style="height:100px;width:200px;"  alt=""> </td>
-            <!-- style="height:100px;width:150px;" -->
-        </ng-container>
+            
+            <!-- i Controla el numero de iteraciones a Mostrar -->
+        <!-- <ng-container *ngIf="i < 10">
+            style="height:100px;width:150px;"
+        </ng-container> -->
+        
       </tr>
     </tbody>
-
-
-    
   </table>
+  <pagination-controls class="my-pagination" (pageChange)="pageActual = $event"></pagination-controls>  
+
 
   
 

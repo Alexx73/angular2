@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './posts.component.html',
 })
 export class PostsComponent implements OnInit {
-
+  pageActual:number = 1;
   posts : any [];
   url = 'https://mi-comida-api.herokuapp.com/burgers';
   url2 = 'https://restaurants-api-01.herokuapp.com/restaurants';

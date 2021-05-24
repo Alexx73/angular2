@@ -15,6 +15,7 @@ import { ContentComponent } from './content/content.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { AboutComponent } from './about/about.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxPaginationModule,
     RouterModule.forRoot([
       {path: 'users', component:UsersComponent },
       {
