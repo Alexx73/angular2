@@ -1,0 +1,42 @@
+.container {
+    /* background-color: blueviolet; */
+    font-family: verdana;
+    padding: 1em 2em;
+}
+
+table th, td  {
+    width: 100%;
+    border: 2px solid;
+}
+
+td, th {
+    padding: 5px, 10px;
+}
+
+@media (max-width: 34em) {
+    .container {
+        background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%); 
+    }
+
+    table {
+        margin: auto;
+    }
+
+    table th, td {
+        width: 100%;
+        border: 0px;
+        
+    }
+
+    table tr {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid grey;
+        padding: 1 em;
+        margin-bottom: 1em;
+    }
+
+    table thead {
+        display: none;
+    }
+}

@@ -84,13 +84,15 @@
 
 <div class="container">
 
-  <table class="table table-responsive">
+  <h2 class="text-center" >Lista de Usuarios</h2>
+
+  <table>
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Email</th>
-        <th scope="col">User</th>
+        <th style="width: 15px;" >#</th>
+        <th >Name</th>
+        <th >Email</th>
+        <th >User</th>
       </tr>
     </thead>
     <tbody>
@@ -98,7 +100,7 @@
 
         <!-- i Controla el numero de iteraciones a Mostrar -->
         <ng-container *ngIf="i < 10">
-            <th scope="row">{{item.id}}</th>
+            <th >{{item.id}}</th>
             <td>{{item.name}}</td>
             <td>{{item.email}}</td>
             <td>{{item.username}}</td>

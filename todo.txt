@@ -4,3 +4,14 @@ agregar lista clickeable
 
 agregar modal
 
+ng build --prod --base-href "https://<username>.github.io/<reponame>/"
+
+Alexx73/angular2
+
+
+to build for production:
+ng build --prod --base-href "https://Alexx73.github.io/angular2/"
+
+To deploy run:
+angular-cli-ghpages --dir=dist
+
